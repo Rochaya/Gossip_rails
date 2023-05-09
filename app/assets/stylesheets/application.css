@@ -1,15 +1,70 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+    font-family: 'romance';
+    src: url('../fonts/Sweet Romance.ttf');
+}
+
+
+body {
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(71,6,68,1) 57%, rgba(88,7,76,1) 76%, rgba(121,9,92,1) 100%, rgba(132,0,255,1) 100%);
+}
+
+nav {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(71,6,68,1) 57%, rgba(88,7,76,1) 76%, rgba(121,9,92,1) 100%, rgba(132,0,255,1) 100%);
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar {
+    font-size: 1.3em;
+    color: aliceblue;
+}
+.navbar li .nav-link {
+    color: aliceblue;
+}
+
+.center1 {
+    justify-content: center;
+}
+
+label {
+    color: aliceblue;
+}
+
+p {
+    color: aliceblue;
+}
+
+h1 {
+    color: aliceblue;
+    padding-top: 5px;
+    text-align: center;
+    font-family: 'romance';
+}
+
+h2 {
+    color: aliceblue;
+}
+
+h3 {
+    color: aliceblue;
+}
+.row {
+    display: flex;
+    text-align: center;
+}
+
+.btn {
+    background-color: blueviolet;
+    border-color: none;
+}
+
+.btn-primary {
+    border: none;
+}
+
+p {
+    text-align: center;
+}
