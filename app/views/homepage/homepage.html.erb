@@ -1,0 +1,15 @@
+<div class="madiv">
+  <h2>Ce qui se dit sur gossip reste sur gossip !</h2>
+</div>
+<div class="container">
+  <% @gossips.each do |gossip| %>
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"><%= gossip.title %></h5>
+        <p class="card-text"><em><%= gossip.content %></em></p>
+        <a href="potin/<%=gossip.id%>" class="btn b1">Voir le potin</a>
+      </div>
+    </div>
+  <% end %>
+</div>
+

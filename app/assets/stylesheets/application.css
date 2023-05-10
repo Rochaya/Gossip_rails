@@ -1,33 +1,103 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+/* @font-face {
     font-family: 'romance';
     src: url('../fonts/Sweet Romance.ttf');
-}
+} */
 
 
 body {
+    display: block;
+    justify-content: center;
     text-align: center;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(71,6,68,1) 57%, rgba(88,7,76,1) 76%, rgba(121,9,92,1) 100%, rgba(132,0,255,1) 100%);
 }
 
-nav {
+.navbar {
+    height: 50px;
+    margin-bottom: 0;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 32%, rgba(71,6,68,1) 57%, rgba(88,7,76,1) 76%, rgba(121,9,92,1) 100%, rgba(132,0,255,1) 100%);
-    display: flex;
-    flex-direction: row;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    font-family: 'Permanent Marker', cursive;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    margin-left: 10px;
 }
 
-.navbar {
-    font-size: 1.3em;
-    color: aliceblue;
-}
-.navbar li .nav-link {
-    color: aliceblue;
+.nonnon {
+    color: #fff;
 }
 
 .center1 {
+    justify-content: flex-end;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    margin-left: 10px;
+    color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f6f6f6 !important;
+    text-decoration: underline #f6f6f6 2px;
+    transition: transform 0.5s ease;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
     justify-content: center;
 }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    background: rgb(222,0,255);
+    background: radial-gradient(circle, rgba(222,0,255,1) 14%, rgba(242,151,255,1) 82%, rgba(255,255,255,1) 100%);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    width: 20rem;
+  }
+  
+  .card-body {
+    padding: 4rem;
+  }
+  
+  .card-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .card a:hover {
+    background-color: #0069d9;
+    color: #fff;
+  }
 
 label {
     color: aliceblue;
@@ -39,26 +109,36 @@ p {
 
 h1 {
     color: aliceblue;
-    padding-top: 5px;
+    padding-top: px;
     text-align: center;
-    font-family: 'romance';
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 
-h2 {
+.madiv {
+    padding: 20px;
+    justify-content: center;
+    font-family: 'Indie Flower', cursive;
     color: aliceblue;
+    margin-top: 50px;
 }
-
 h3 {
     color: aliceblue;
 }
+
 .row {
     display: flex;
     text-align: center;
 }
 
 .btn {
-    background-color: blueviolet;
+    background: rgb(132,0,255);
+    background: linear-gradient(90deg, rgba(132,0,255,1) 0%, rgba(66,0,82,1) 48%);
+    transition: 0.3s ease-in-out;
     border-color: none;
+    border-radius: 50px;
+}
+.btn:hover {
+    transform: scale(1.2);
 }
 
 .btn-primary {
@@ -67,4 +147,15 @@ h3 {
 
 p {
     text-align: center;
+}
+
+.container1 {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.titlec {
+    color: aliceblue;
+    margin-top: 70px;
 }

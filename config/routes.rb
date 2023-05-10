@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get '/homepage', to:'homepage#show'
-  get '/create_gossip', to:'create_gossip#show'
-  get '/contact', to: 'contact#show'
-  get '/team', to: 'team#show'
+  #get '/name', to: 'homepage#hello'
+  get '/homepage', to:'homepage#homepage'
+  get '/create_gossip', to:'create_gossip#create'
+  get '/contact', to: 'contact#contact'
+  get '/team', to: 'team#team'
+  get 'potin/:id', to:'potin#potin', as: 'potin'
 end
