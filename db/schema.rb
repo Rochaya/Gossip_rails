@@ -94,6 +94,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_06_120242) do
   add_foreign_key "comments", "users"
   add_foreign_key "gossip_tags", "gossips"
   add_foreign_key "gossip_tags", "tags"
-  add_foreign_key "gossips", "users"
   add_foreign_key "likes", "users"
 end

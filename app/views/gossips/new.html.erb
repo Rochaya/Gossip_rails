@@ -1,0 +1,16 @@
+<h1>Balance ton gossip !</h1>
+<%= form_tag url_for(action: 'create'), method: :post do %>
+<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <%= label_tag 'Title' %>
+    <%= text_field_tag 'title', nil %>
+    <br /> <br />
+
+    <%= label_tag 'Content' %>
+    <%= text_area_tag 'content', nil %>
+    <br /> <br />
+
+    <%= submit_tag "Create Post" %>
+
+  <% end %>
+
+
