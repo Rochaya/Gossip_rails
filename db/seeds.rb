@@ -15,7 +15,8 @@ end
     last_name: Faker::Name.last_name,
     description: Faker::Lorem.paragraph(sentence_count: 2),
     email: Faker::Internet.email,
-    age: rand(18..80)
+    age: rand(18..80),
+    password: "rorororo"
   )
   user.city = City.all.sample
   user.save
