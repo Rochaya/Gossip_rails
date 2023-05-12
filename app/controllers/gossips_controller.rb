@@ -24,8 +24,4 @@ class GossipsController < ApplicationController
     @users = User.all
     # Méthode qui récupère tous les potins et les assigne à la variable @gossips
   end
-
-  def gossip_params
-    params.require(:gossip).permit(:title, :content, user_id: User.all.sample.id)
-  end
 end
