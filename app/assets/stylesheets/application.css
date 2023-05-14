@@ -59,32 +59,35 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
   
-  .card {
-    background: rgb(222,0,255);
-    background: radial-gradient(circle, rgba(222,0,255,1) 14%, rgba(242,151,255,1) 82%, rgba(255,255,255,1) 100%);
+.card {
+    background: rgb(71,6,68);
+    background: linear-gradient(90deg, rgba(71,6,68,1) 0, rgba(83,7,74,1) 25, rgba(2,0,36,1) 72);
     border-radius: 15px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     margin: 10px;
     width: 20rem;
-  }
+    height: 20rem;
+    justify-content: center;
+}
   
-  .card-body {
+.card-body {
     padding: 4rem;
-  }
+}
   
-  .card-title {
+.card-title {
     font-family: 'Permanent Marker', cursive;
     font-size: 1.2rem;
     margin-bottom: 1rem;
-  }
+    color: #f6f6f6;
+}
   
-  .card p {
+.card p {
     margin-bottom: 0.5rem;
-  }
+}
   
-  .card a {
+.card a {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
@@ -92,12 +95,12 @@ body {
     color: #fff;
     border-radius: 4px;
     text-decoration: none;
-  }
+}
   
-  .card a:hover {
+.card a:hover {
     background-color: #0069d9;
     color: #fff;
-  }
+}
 
 label {
     color: aliceblue;
@@ -131,14 +134,14 @@ h3 {
 }
 
 .btn {
-    background: rgb(132,0,255);
-    background: linear-gradient(90deg, rgba(132,0,255,1) 0%, rgba(66,0,82,1) 48%);
-    transition: 0.3s ease-in-out;
+    background: rgb(71,6,68);
+    background: linear-gradient(90deg, rgba(71,6,68,1) 0%, rgba(172,0,89,1) 0%);
+    transition: 0.4s ease-in-out;
     border-color: none;
     border-radius: 50px;
 }
 .btn:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .btn-primary {

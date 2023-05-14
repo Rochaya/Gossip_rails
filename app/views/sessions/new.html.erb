@@ -1,17 +1,21 @@
-
+<head>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
 <h1>Connexion</h1>
-
+<%= link_to "Déconnexion", sessions_path, method: :delete %>
 <% if flash[:error] %>
   <p><%= flash[:error] %></p>
 <% end %>
 
 <%= form_tag sessions_path do %>
-  <div>
+  <div class="boxmail">
     <%= label_tag :email %>
     <%= text_field_tag :email %>
   </div>
 
-  <div>
+  <div class="pass">
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </div>
@@ -21,3 +25,79 @@
 <%= link_to "Creer un compte", new_user_path, class:"nav-link btn1" %>
 
 </html>
+
+<style>
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 20vh;
+  height: 4vh;
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid transparent;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+input[type="submit"] {
+  background: rgb(132,0,255);
+  background: linear-gradient(90deg, rgba(132,0,255,1) 0, rgba(66,0,82,1) 48);
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+  color: white;
+}
+
+.btn1 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 350px;
+  text-align: center;
+  justify-content: center;
+  background: rgb(132,0,255);
+  background: linear-gradient(90deg, rgba(132,0,255,1) 0, rgba(66,0,82,1) 48);
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn1:hover {
+  color: white;
+  background: rgb(71,6,68);
+  background: linear-gradient(90deg, rgba(71,6,68,1) 0, rgba(172,0,89,1) 0);
+  transition: 0.4s ease-in-out;
+}
+</style>

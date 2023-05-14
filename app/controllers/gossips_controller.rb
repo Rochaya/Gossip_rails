@@ -10,12 +10,17 @@ class GossipsController < ApplicationController
   end
 
   def create
-    @gossip = Gossip.new(title: params['title'], content: params['content'], user_id: User.all.sample.id)
-    if @gossip.save
-      flash[:success] = "Le potin a bien été créé !"
-      redirect_to '/'
+    if current_user
+      @gossip = Gossip.new(title: params['title'], content: params['content'], user_id: current_user.id)
+      if @gossip.save
+        flash[:success] = "Le potin a bien été créé !"
+        redirect_to '/'
+      else
+        render :new
+      end
     else
-      render :new
+      flash[:danger] = "Vous devez être connecté pour créer un gossip."
+      redirect_to session_path
     end
   end
 

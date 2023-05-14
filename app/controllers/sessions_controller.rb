@@ -11,9 +11,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to gossips_path
+      flash[:success] = "Connexion réussie!"
+      session[:login_message] = flash[:success]
 
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash[:error] = "Email ou mot de passe incorrect."
       render 'new'
     end
   end
@@ -25,6 +27,7 @@ class SessionsController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update

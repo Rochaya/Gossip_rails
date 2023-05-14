@@ -1,16 +1,68 @@
-<h1>Balance ton gossip !</h1>
-<%= form_tag url_for(action: 'create'), method: :post do %>
-<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= label_tag 'Title' %>
-    <%= text_field_tag 'title', nil %>
-    <br /> <br />
+<html>
+  <div class="title1">
+    <h1>Balance ton gossip !</h1>
+  </div>
+  
+  <div class="container1">
+    <%= form_tag url_for(action: 'create'), method: :post do %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+      <%= label_tag 'Title' %>
+      <%= text_field_tag 'title', nil, placeholder: 'Entrez un titre' %>
+    
+      <%= label_tag 'Content' %>
+      <%= text_area_tag 'content', nil, placeholder: 'Entrez votre message' %>
 
-    <%= label_tag 'Content' %>
-    <%= text_area_tag 'content', nil %>
-    <br /> <br />
+      <%= submit_tag "Envoyer" %>
+    <% end %>
+  </div>
+</html>
 
-    <%= submit_tag "Create Post" %>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&display=swap');
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
 
-  <% end %>
+label {
+  font-family: 'Permanent Marker', cursive;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-color: none;
+  text-color: white;
+}
 
+input[type="text"],
+textarea {
+  color: #fff;
+  background: rgb(71,6,68);
+  background: linear-gradient(90deg, rgba(71,6,68,1) 0, rgba(83,7,74,1) 25, rgba(2,0,36,1) 72);
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+</style>
 

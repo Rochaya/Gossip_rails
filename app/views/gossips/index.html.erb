@@ -1,6 +1,14 @@
+<% if session[:login_message].present? %>
+  <div class="alert alert-success">
+    <%= session[:login_message] %>
+  </div>
+  <% session.delete(:login_message) %>
+<% end %>
+
 <div class="madiv">
   <h2>Ce qui se dit sur gossip reste sur gossip !</h2>
 </div>
+
 <div class="container">
   <% @gossips.each do |gossip| %>
     <div class="card">
@@ -12,4 +20,23 @@
     </div>
   <% end %>
 </div>
+
+<style>
+  .alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    margin-top: 40px;
+    font-size: 14px;
+    padding: 10px;
+    animation: fadeOut 3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+</style>
 

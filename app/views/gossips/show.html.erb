@@ -1,11 +1,70 @@
 <html>
     <body>
-        <center>
-        </br>
-        </br>
-            <h1><%= @index.title %></h1>
-        </br>
-            <p> <%= @index.content %></p>
-        </center>
+        <div class="card1">
+            <div class="card-body">
+                <h5 class="card-title"><%= @index.title %></h5>
+                <p class="card-text"><em><%= @index.content %></em></p>
+            </div>
+        </div>
     </body>
 </html>
+
+<style>
+
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card1 {
+    background: rgb(71,6,68);
+    background: linear-gradient(90deg, rgba(71,6,68,1) 0, rgba(83,7,74,1) 25, rgba(2,0,36,1) 72);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    margin: 30px auto;
+    margin-top: 150px;
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    justify-content: center;
+    align-tiems: center;
+    transition: 0.5s ease-in-out;
+}
+
+.card1:hover {
+    transform: scale(1.10);
+}
+
+.card1-body {
+    padding: 4rem;
+}
+  
+.card1-title {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #f6f6f6;
+}
+  
+.card1 p {
+    margin-bottom: 0.5rem;
+}
+  
+.card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+}
+  
+.card a:hover {
+    background-color: #0069d9;
+    color: #fff;
+}
+
+</style>
